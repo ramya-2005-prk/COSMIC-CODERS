@@ -157,7 +157,7 @@ if prompt := st.chat_input("Ask a question about procedures..."):
                 history_for_gemini.append(types.Content(role="user", parts=[types.Part.from_text(text=prompt)]))
                 
                 response = client.models.generate_content(
-                    model="gemini-2.0-flash", 
+                    model="gemini-2.0-flash-exp", 
                     contents=history_for_gemini,
                     config=types.GenerateContentConfig(
                         system_instruction=SYSTEM_PROMPT
